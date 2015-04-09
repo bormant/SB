@@ -78,9 +78,11 @@ find -L . \
 [ -r $CWD/osversion.patch ] &&
   patch -p1 --verbose < $CWD/osversion.patch
 
+if [ "$NATSPEC" != "yes" ]; then
 [ "$ARCH" = "x86_64" ] &&
   cp makefile.linux_amd64_asm makefile.machine ||
   cp makefile.linux_x86_asm_gcc_4.X makefile.machine
+fi
 
 make all3 \
   OPTFLAGS="$SLKCFLAGS" \
