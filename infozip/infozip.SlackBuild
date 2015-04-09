@@ -45,6 +45,8 @@ cd $TMP
 rm -rf zip$(echo $ZIP | tr -d .)
 tar xvf $CWD/zip$(echo $ZIP | tr -d .).tar.?z* || exit 1
 cd zip$(echo $ZIP | tr -d .)
+[ "${NATSPEC:-no}" = "yes" ] &&
+  cat $CWD/zip30-natspec.diff | patch -p1 --verbose || exit 1
 chown -R root:root .
 mkdir -p $PKG/usr/doc/zip-$ZIP
 cp -a BUGS CHANGES INSTALL LICENSE README* TODO US* WHATSNEW WHERE \
@@ -67,6 +69,8 @@ tar xvf $CWD/unzip$(echo $VERSION | tr -d .).tar.?z* || exit 1
 cd unzip$(echo $VERSION | tr -d .)
 zcat $CWD/unzip.use.system.libbz2.diff.gz | patch -p1 --verbose || exit 1
 zcat $CWD/unzip.process.c.diff.gz | patch -p1 --verbose || exit 1
+[ "${NATSPEC:-no}" = "yes" ] &&
+  cat $CWD/unzip60-natspec.diff | patch -p1 --verbose || exit 1
 chown -R root:root .
 mkdir -p $PKG/usr/doc/unzip-$VERSION
 cp -a BUGS COPYING* Contents History.* INSTALL LICENSE README ToDo WHERE \

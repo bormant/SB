@@ -1,0 +1,14 @@
+PRGNAM="infozip"
+VERSION="6.0"
+DOWNLOAD="\
+  http://mirrors.slackware.com/slackware/slackware-14.1/source/a/infozip/zip30.tar.xz \
+  http://mirrors.slackware.com/slackware/slackware-14.1/source/a/infozip/unzip60.tar.xz \
+  http://mirrors.slackware.com/slackware/slackware-14.1/source/a/infozip/unzip.use.system.libbz2.diff.gz \
+  http://mirrors.slackware.com/slackware/slackware-14.1/source/a/infozip/unzip.process.c.diff.gz \
+  http://mirrors.slackware.com/slackware/slackware-14.1/source/a/infozip/slack-desc"
+MD5SUM=" \
+  6323b2cec279e432ab0b5ef15c17bddf \
+  cd3e1af87f60fa286c6913e9ffe6f30a \
+  36dbb4aa4d4f8549740b7eff25e4f5e4 \
+  f75c44c6fe72b7eb01d33a5ed49a931f \
+  440d4bdadb8f2df82df9b4ba33fbb4cc"
