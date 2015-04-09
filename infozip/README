@@ -1,6 +1,12 @@
-This is infozip slackbuild script mostly from Slackware 14.1.
+This is infozip slackbuild script from Slackware.
 
 Added patch to build infozip with libnatspec.
+
+To download sources use:
+
+  # . *info
+  # wget $DOWNLOAD
+
 To build with libnatspec use:
 
-  NATSPEC=yes sh *Build
+  # NATSPEC=yes sh *Build
